@@ -13,10 +13,27 @@ body {
 	accent-color: var(--color-accent)
 }
 
+/* . before class name */
+.current {
+	border-bottom-width: 3px;
+}
+
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
     gap: 20px; /* Adjust the gap between grid items as needed */
+}
+
+.resume {
+	border-bottom-width: 1px;
+}
+
+.resume h1:hover {
+	text-decoration: underline var(--color-accent);
+}
+
+.resume h3 a {
+	color: var(--color-accent)
 }
 
 img {
@@ -35,7 +52,7 @@ h1, h2, h3, h4, h5 h6{
 
 h2 {
 	margin: 0;
-	font-size: 400%;
+	font-size: 120%;
 }
 
 form {
@@ -46,22 +63,28 @@ form {
 	gap: 1em;
 }
 
+a { 
+	flex:1 
+}
+
+p {
+	font: 100%/1.5 system-ui;
+	font-size: 100%;
+}
+
 nav {
 	display: flex;
-	display: contents;
-	margin-bottom: auto;
+	margin-bottom: 20px;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: oklch(80% 3% 200);
 }
 
 nav a {
-	flex: 1;
 	text-decoration: none;
 	color: inherit;
 	text-align: center;
 	padding: .5em;
-	
 }
 
 nav a:hover {
