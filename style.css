@@ -1,5 +1,6 @@
 :root {
     --color-accent: #9adc8f; /* Replace with your preferred accent color */
+	color-scheme: light dark;
 }
 
 body {
@@ -73,11 +74,13 @@ p {
 }
 
 nav {
+	--border-color: oklch(50% 10% 200 / 40%);
+	
 	display: flex;
 	margin-bottom: 20px;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-bottom-color: oklch(80% 3% 200);
+	border-bottom-color: oklch(80% 3% 200 / 40%);
 }
 
 nav a {
@@ -91,7 +94,8 @@ nav a:hover {
     border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: var(--color-accent);
-	background-color: oklch(from var(--color-accent) 95% 5% h)
+	/* background-color: oklch(from var(--color-accent) 95% 5% h) */
+	background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 label, input, textarea, button {
